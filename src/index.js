@@ -11,6 +11,7 @@ import global_en from 'translations/en/global.json';
 import 'styles/normalize.css';
 import 'styles/_colors.scss';
 import 'styles/font-family.scss';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 i18next.use(LanguageDetector).init({
    interpolation: { escapeValue: false },
