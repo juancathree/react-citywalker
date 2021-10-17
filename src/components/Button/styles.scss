@@ -1,0 +1,16 @@
+@import 'styles/_colors.scss';
+
+.button {
+   align-self: center;
+   width: 60%;
+   background-color: $coral;
+   border: none;
+   outline: none;
+   height: 5vh;
+   border-radius: 10px;
+   color: $white;
+   text-transform: uppercase;
+   font-weight: bold;
+   margin: 2rem;
+   cursor: pointer;
+}
