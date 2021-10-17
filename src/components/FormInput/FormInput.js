@@ -4,9 +4,9 @@ import './styles.scss';
 
 function FormInput({ icon, placeholder, type, ...props }) {
    const [field, meta] = useField(props);
-   console.log({ field, meta });
+
    return (
-      <div className="input">
+      <div className={meta.touched && meta.error ? 'input error' : 'input'}>
          <FontAwesomeIcon className="input__icon" icon={icon} />
          <input
             {...field}
@@ -14,7 +14,6 @@ function FormInput({ icon, placeholder, type, ...props }) {
             type={type}
             className="input__field"
          />
-         {meta.touched && meta.error ? <div>{meta.error}</div> : null}
       </div>
    );
 }
