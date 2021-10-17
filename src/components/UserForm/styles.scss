@@ -1,0 +1,53 @@
+@import 'styles/_colors.scss';
+
+.form {
+   width: 80vw;
+   display: flex;
+   flex-direction: column;
+   background-color: $white;
+   border-radius: 10px;
+   border: 1px solid $border;
+
+   &__title {
+      align-self: center;
+      font-size: 2.5rem;
+      margin: 3rem;
+
+      span {
+         font-family: 'Kaushan Script', cursive !important;
+      }
+
+      .first {
+         color: $verde;
+      }
+
+      .second {
+         color: $coral;
+      }
+   }
+}
+
+.google-btn {
+   align-self: center;
+   margin-bottom: 2rem;
+}
+
+hr {
+   align-self: center;
+   width: 70%;
+   margin: 0 0 2rem 0;
+   border: 0;
+   border-top: 1px solid $border;
+}
+
+.question {
+   text-align: center;
+   font-size: 0.8rem;
+   margin-bottom: 1rem;
+   font-weight: 300;
+
+   a {
+      color: $verde;
+      font-weight: bold;
+   }
+}
