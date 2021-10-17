@@ -1,12 +1,7 @@
-import LoginForm from 'components/LoginForm/LoginForm';
-import Container from 'components/Container/Container';
+import LoginForm from 'components/UserForm/LoginForm';
 
 function Login() {
-   return (
-      <Container>
-         <LoginForm />
-      </Container>
-   );
+   return <LoginForm />;
 }
 
 export default Login;
