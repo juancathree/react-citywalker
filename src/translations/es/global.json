@@ -2,6 +2,17 @@
     "login": {
         "email": "Email",
         "password": "Contraseña",
-        "login": "Entrar"
+        "login": "Entrar",
+        "googleLogin": "Entrar con Google",
+        "required": "es requerido",
+        "signup": "¿No tienes una cuenta?",
+        "signupLink": "Registrarse"
+    },
+    "signup": {
+        "name": "Nombre",
+        "signup": "Registrarse",
+        "googleSignup": "Registrarse con Google",
+        "login": "¿Tienes una cuenta?",
+        "loginLink": "Entrar"
     }
 }
