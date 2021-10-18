@@ -1,6 +1,9 @@
 @import 'styles/_colors.scss';
 
 .button {
+   display: grid;
+   justify-content: center;
+   align-content: center;
    align-self: center;
    width: 60%;
    background-color: $coral;
@@ -13,4 +16,9 @@
    font-weight: bold;
    margin: 2rem;
    cursor: pointer;
+
+   * {
+      justify-self: center;
+      align-self: center;
+   }
 }
