@@ -6,7 +6,10 @@
         "googleLogin": "Entrar con Google",
         "required": "es requerido",
         "signup": "¿No tienes una cuenta?",
-        "signupLink": "Registrarse"
+        "signupLink": "Registrarse",
+        "checkCredentials": "Comprobando credenciales",
+        "errorServer": "Algo no funciono, intentalo mas tarde",
+        "errorCrendentials": "Credenciales erroneas"
     },
     "signup": {
         "name": "Nombre",

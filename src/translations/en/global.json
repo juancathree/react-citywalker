@@ -6,7 +6,10 @@
         "googleLogin": "Login with Google",
         "required": "is required",
         "signup": "Don't have an account?",
-        "singupLink": "Sing up"
+        "singupLink": "Sing up",
+        "checkCredentials": "Checking credentials",
+        "errorServer": "Something went wrong, try it later",
+        "errorCrendentials": "Bad Credentials"
     },
     "signup": {
         "name": "Name",
