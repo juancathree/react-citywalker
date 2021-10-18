@@ -3,17 +3,12 @@ import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 import { faEnvelope, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
-import GoogleLogin from 'react-google-login';
 import FormInput from 'components/FormInput/FormInput';
 import Button from 'components/Button/Button';
 import './styles.scss';
 
 function LoginForm() {
    const [t] = useTranslation('global');
-
-   const responseGoogle = (response) => {
-      console.log(response);
-   };
 
    const SignupSchema = Yup.object().shape({
       name: Yup.string().required(),
@@ -55,15 +50,6 @@ function LoginForm() {
                icon={faLock}
             />
             <Button type="submit">{t('signup.signup')}</Button>
-            <hr />
-            <GoogleLogin
-               clientId={process.env.REACT_APP_GOOGLE}
-               buttonText={t('signup.googleSignup')}
-               onSuccess={responseGoogle}
-               onFailure={responseGoogle}
-               cookiePolicy={'single_host_origin'}
-               className="google-btn"
-            />
             <h2 className="question">
                {t('signup.login')}{' '}
                <Link to="/login">{t('signup.loginLink')}</Link>
