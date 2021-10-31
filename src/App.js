@@ -9,19 +9,19 @@ function App() {
       <IKContext urlEndpoint={process.env.REACT_APP_IK}>
          <Container>
             <AppRouter />
-            <ToastContainer
-               position="top-center"
-               autoClose={2000}
-               hideProgressBar={false}
-               newestOnTop={false}
-               closeOnClick
-               rtl={false}
-               pauseOnFocusLoss
-               draggable
-               pauseOnHover={false}
-               className="toast"
-            />
          </Container>
+         <ToastContainer
+            position="top-center"
+            autoClose={2000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover={false}
+            className="toast"
+         />
       </IKContext>
    );
 }
