@@ -1,12 +1,14 @@
 @import 'styles/_colors.scss';
 
 .form {
-   width: 80vw;
+   width: minmax(400px, 70vw);
+   align-self: center;
    display: flex;
    flex-direction: column;
    background-color: $white;
    border-radius: 10px;
    border: 1px solid $border;
+   box-shadow: 8px 8px 27px #b5b5b5, -8px -8px 27px #ffffff;
 
    &__title {
       align-self: center;
@@ -25,11 +27,6 @@
          color: $coral;
       }
    }
-}
-
-.google-btn {
-   align-self: center;
-   margin-bottom: 2rem;
 }
 
 hr {
