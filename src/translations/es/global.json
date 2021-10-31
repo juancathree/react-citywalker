@@ -9,13 +9,46 @@
         "signupLink": "Registrarse",
         "checkCredentials": "Comprobando credenciales",
         "errorServer": "Algo no funciono, intentalo mas tarde",
-        "errorCrendentials": "Credenciales erroneas"
+        "errorCrendentials": "Credenciales erroneas",
+        "erroremail": "Debe ser un email valido",
+        "errorpassword": "Debe tener una longitud mayor a 0"
     },
     "signup": {
         "name": "Nombre",
         "signup": "Registrarse",
         "googleSignup": "Registrarse con Google",
         "login": "¿Tienes una cuenta?",
-        "loginLink": "Entrar"
+        "loginLink": "Entrar",
+        "success": "Bienvenid@ a CityWalker"
+    },
+    "auth": {
+        "errorCrendentials": "Credenciales erroneas",
+        "erroremail": "Debe ser un email valido",
+        "errorpassword": "Debe tener una longitud mayor a 0",
+        "errorname": "Debe tener una longitud mayor a 0",
+        "duplicateKey": "Ya existe una usuario con este email"
+    },
+    "navbar": {
+        "cities": "Ciudades",
+        "travels": "Viajes",
+        "user": "Usuario"
+    },
+    "search": {
+        "placeholder": "Busca una ciudad..."
+    },
+    "add": {
+        "travel": "Crear viaje"
+    },
+    "newTravel": {
+        "city": "Elige una ciudad",
+        "schedule": "Elige el horario del viaje",
+        "startDay": "Dia y hora inicial",
+        "startDayInfo": "Este es el día de tu llegada a la ciudad y la hora en que comienzas a visitar lugares",
+        "endDay": "Dia y hora final",
+        "endDayInfo": "Este es el dia que dejas la ciudad y la hora en que dejas de visitar lugares",
+        "startItinerary": "Hora inicial del itinerario",
+        "startItineraryInfo": "Esta es la hora inicial de visitar lugares del resto de dias que no sea el de llegada",
+        "endItinerary": "Hora final del itinerario",
+        "endItineraryInfo":"Esta es la hora final de visitar lugares del resto de dias que no sea el de dejar la ciudad" 
     }
 }

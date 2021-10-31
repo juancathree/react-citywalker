@@ -8,14 +8,45 @@
         "signup": "Don't have an account?",
         "singupLink": "Sing up",
         "checkCredentials": "Checking credentials",
-        "errorServer": "Something went wrong, try it later",
-        "errorCrendentials": "Bad Credentials"
+        "errorServer": "Something went wrong, try it later"
+       
     },
     "signup": {
         "name": "Name",
         "signup": "Sign up",
         "googleSignup": "Sign up with Google",
         "login": "Do you have an account?",
-        "loginLink": "Login"
+        "loginLink": "Login",
+        "success": "Welcome to CityWalker"
+    },
+    "auth": {
+        "errorCrendentials": "Bad Credentials",
+        "erroremail": "Must be a valid email",
+        "errorpassword": "Must be longer than 0",
+        "errorname": "Must be longer than 0",
+        "duplicateKey": "There is already a user with this email"
+    },
+    "navbar": {
+        "cities": "Cities",
+        "travels": "Travels",
+        "user": "User"
+    },
+    "search": {
+        "placeholder": "Search a city..."
+    },
+    "add": {
+        "travel": "Create travel"
+    },
+    "newTravel": {
+        "city": "Choose a city",
+        "schedule": "Choose the travel's schedule",
+        "startDay": "Day and hour initial",
+        "startDayInfo": "This is the day you arrive to the city and the hour you start visiting places",
+        "endDay": "Day and hour final",
+        "endDayInfo": "This is the day you leave the city and the hour you finish visiting places",
+        "startItinerary": "Start hour of journey",
+        "startItineraryInfo": "This is the hour to start visiting places the rest of the days that is not the initial",
+        "endItinerary": "End hour of journey",
+        "endItineraryInfo":"This is the hour to finish visiting places the rest of the days that is not the final" 
     }
 }
