@@ -1,0 +1,62 @@
+@import 'styles/_colors.scss';
+
+.menu {
+   background: $white;
+   position: fixed;
+   bottom: 0;
+   left: 50%;
+   transform: translate(-50%);
+   margin-bottom: 1rem;
+   width: 80%;
+   padding: 0.5rem;
+   border: 2px solid $verde;
+   border-radius: 50px;
+   display: grid;
+   grid-template-rows: 4vh;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 0.3rem;
+   align-items: center;
+   z-index: 1;
+   box-shadow: 5px 5px 10px #b5b5b5, -5px -5px 10px #ffffff;
+
+   &__item {
+      text-align: center;
+      justify-self: center;
+
+      .fa-2x {
+         width: 1.3rem !important;
+      }
+
+      &-name {
+         display: none;
+         margin: -0.3rem 0 0 0 !important;
+         font-size: 0.8rem;
+         color: $verde;
+         font-weight: bold;
+      }
+   }
+}
+
+.active {
+   .menu__item-name {
+      display: block !important;
+   }
+
+   svg {
+      color: $verde !important;
+   }
+}
+
+.inactive {
+   svg {
+      color: $border;
+   }
+}
+
+a {
+   color: $border;
+}
+
+.disp-none {
+   display: none !important;
+}
