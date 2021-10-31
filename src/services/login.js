@@ -1,7 +1,9 @@
+import { setFulfilled, setPending, setRejected } from 'reducers/authReducer';
+
 const login =
    ({ email, password }) =>
    async (dispatch) => {
-      dispatch({ type: 'auth/pending' });
+      dispatch(setPending());
       try {
          const response = await fetch(`${process.env.REACT_APP_API}/login`, {
             method: 'POST',
@@ -22,9 +24,9 @@ const login =
             ';expires=' +
             d +
             ';path=/';
-         dispatch({ type: 'auth/fulfilled', payload: data });
+         dispatch(setFulfilled(data));
       } catch (e) {
-         dispatch({ type: 'auth/error', error: e.message });
+         dispatch(setRejected(e.message));
       }
    };
 
