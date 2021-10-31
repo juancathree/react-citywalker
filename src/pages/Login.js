@@ -18,14 +18,14 @@ function Login() {
          case 'pending':
             document.getElementsByClassName('button').innerHTML = <Spinner />;
             break;
-         case 'succeded':
+         case 'succeeded':
             history.push('/cities');
             break;
          case 'rejected':
             let error =
                status.error === 500
                   ? t('login.errorServer')
-                  : t('login.errorCrendentials');
+                  : t('auth.errorCrendentials');
             toast.error(error, {
                autoClose: 2000,
             });
