@@ -22,35 +22,48 @@ function LoginForm() {
       <Formik
          initialValues={{ email: '', password: '' }}
          validationSchema={LoginSchema}
-         validateOnChange={false}
-         validateOnBlur={false}
+         validateOnChange={true}
          onSubmit={(values) => {
             dispatch(login(values));
          }}
       >
-         <Form className="form">
-            <h2 className="form__title">
-               <span className="first">City</span>
-               <span className="second">Walker</span>
-            </h2>
-            <FormInput
-               name="email"
-               type="email"
-               placeholder={t('login.email')}
-               icon={faEnvelope}
-            />
-            <FormInput
-               name="password"
-               type="password"
-               placeholder={t('login.password')}
-               icon={faLock}
-            />
-            <Button type="submit">{t('login.login')}</Button>
-            <h2 className="question">
-               {t('login.signup')}{' '}
-               <Link to="/signup">{t('login.signupLink')}</Link>
-            </h2>
-         </Form>
+         {({ values, errors }) => (
+            <Form className="form">
+               <h2 className="form__title">
+                  <span className="first">City</span>
+                  <span className="second">Walker</span>
+               </h2>
+               <FormInput
+                  name="email"
+                  type="email"
+                  placeholder={t('login.email')}
+                  icon={faEnvelope}
+               />
+               <FormInput
+                  name="password"
+                  type="password"
+                  placeholder={t('login.password')}
+                  icon={faLock}
+               />
+               <Button
+                  type="submit"
+                  disabled={
+                     values.email &&
+                     values.password &&
+                     !errors.email &&
+                     !errors.password
+                        ? false
+                        : true
+                  }
+               >
+                  {t('login.login')}
+               </Button>
+               <h2 className="question">
+                  {t('login.signup')}{' '}
+                  <Link to="/signup">{t('login.signupLink')}</Link>
+               </h2>
+            </Form>
+         )}
       </Formik>
    );
 }
