@@ -1,8 +1,12 @@
-$background: #f8f9fb;
+$background: #f7f7f7;
 $white: #fff;
 $coral: #ff868f;
 $verde: #5abaae;
-$border: #c5c5c5;
-$info: #a6a6a6;
-$black: #333;
+$border: #dee2e6;
+$info: #808080;
+$black: #232323;
 $error: #e74c3c;
+
+body {
+   background-color: $background;
+}
