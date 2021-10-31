@@ -3,14 +3,24 @@
 .input {
    display: grid;
    grid-template-columns: 15% 85%;
+   grid-auto-columns: 100%;
    align-self: center;
+   width: 75%;
    padding: 0 0.4rem;
    position: relative;
    height: 2.5rem;
    background-color: $background;
    margin: 0.5rem 0 0.5rem;
-   border-radius: 50px;
+   border-radius: 10px;
    border: 1px solid $border;
+
+   &:focus-within {
+      border: 2px solid $verde !important;
+
+      .input__icon {
+         color: $verde !important;
+      }
+   }
 
    &__icon {
       width: 1.1rem;
@@ -19,49 +29,35 @@
       justify-self: center;
       text-align: center;
       line-height: 55px;
-      color: $verde;
+      color: $border;
    }
 
    &__field {
       background: none;
       outline: none;
       border: none;
-      line-height: 1;
       font-weight: 500;
       font-size: 1.1rem;
       color: $black;
 
-      ::placeholder {
+      &::placeholder {
+         font-weight: 400;
          color: $border;
       }
    }
 }
 
 .error {
-   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-   transform: translate3d(0, 0, 0);
-   border: 1px solid $error !important;
+   border: 2px solid $error !important;
+
+   .input__icon {
+      color: $error !important;
+   }
 }
 
-@keyframes shake {
-   10%,
-   90% {
-      transform: translate3d(-1px, 0, 0);
-   }
-
-   20%,
-   80% {
-      transform: translate3d(2px, 0, 0);
-   }
-
-   30%,
-   50%,
-   70% {
-      transform: translate3d(-4px, 0, 0);
-   }
-
-   40%,
-   60% {
-      transform: translate3d(4px, 0, 0);
-   }
+.message__error {
+   font-size: 0.8rem;
+   text-align: right;
+   margin: -0.4rem 2.5rem 0 0;
+   color: $error;
 }
