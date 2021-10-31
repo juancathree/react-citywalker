@@ -1,0 +1,54 @@
+@import 'styles/_colors.scss';
+
+.city-head {
+   position: sticky;
+   top: 0;
+   width: 100vw;
+   height: 20vh;
+   font-family: 'Kaushan Script', cursive !important;
+
+   &__back {
+      position: absolute;
+      margin: 1rem 0 0 1rem;
+      background-color: $white;
+      border-radius: 50px;
+      padding: 0.3rem;
+      border: 1px solid $border;
+   }
+
+   &__add {
+      position: absolute;
+      top: 15vh;
+      right: 1rem;
+      background-color: $white;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      border-radius: 10px;
+      border: 1px solid $border;
+      padding: 0.3rem;
+   }
+
+   &__img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 0 0 10px 10px;
+   }
+
+   &__title {
+      position: absolute;
+      margin: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+      font-size: 3rem;
+      text-shadow: 2px 2px 20px $black;
+   }
+
+   &__space {
+      height: 1rem;
+      background-color: $background;
+      margin-top: -0.5rem;
+   }
+}

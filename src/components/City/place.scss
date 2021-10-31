@@ -1,0 +1,39 @@
+@import 'styles/_colors.scss';
+
+.place {
+   display: grid;
+   grid-auto-rows: minmax(min-content, max-content);
+   border: 1px solid $border;
+   border-radius: 8px;
+   overflow: scroll;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+   &__img {
+      width: 100%;
+      height: 20vh;
+      object-fit: cover;
+   }
+
+   &__info {
+      display: grid;
+      row-gap: 0.1rem;
+      align-content: center;
+      margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+   }
+
+   &__name {
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 0 !important;
+   }
+
+   &__category {
+      font-size: 0.7rem;
+   }
+
+   &__description {
+      padding-top: 0.2rem;
+      font-size: 0.8rem;
+      color: $info;
+   }
+}
