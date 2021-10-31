@@ -1,0 +1,25 @@
+@import 'styles/_colors.scss';
+
+.schedule-input {
+   position: relative;
+   justify-self: center;
+   width: 80%;
+
+   &__label {
+      font-weight: bold;
+      margin: 0 0 0.3rem 0;
+   }
+
+   &__picker {
+      border: 1px solid $border;
+      border-radius: 10px;
+      background-color: $white;
+      accent-color: $verde;
+   }
+
+   &__info {
+      //   font-size: 1rem;
+      margin: 0.3rem 0 0 0;
+      color: $black;
+   }
+}
