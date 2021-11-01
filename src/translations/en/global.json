@@ -44,9 +44,16 @@
         "startDayInfo": "This is the day you arrive to the city and the hour you start visiting places",
         "endDay": "Day and hour final",
         "endDayInfo": "This is the day you leave the city and the hour you finish visiting places",
-        "startItinerary": "Start hour of journey",
-        "startItineraryInfo": "This is the hour to start visiting places the rest of the days that is not the initial",
-        "endItinerary": "End hour of journey",
-        "endItineraryInfo":"This is the hour to finish visiting places the rest of the days that is not the final" 
+        "itineraryStartTime": "Start hour of journey",
+        "itineraryStartTimeInfo": "This is the hour to start visiting places the rest of the days that is not the initial",
+        "itineraryEndTime": "End hour of journey",
+        "itineraryEndTimeInfo":"This is the hour to finish visiting places the rest of the days that is not the final",
+        "button": "Continue",
+        "entry": "Choose places to enter",
+        "entryInfo": "Choose the places for which you have or plan to buy a ticket",
+        "visit": "",
+        "visitInfo": "",
+        "preferences": "",
+        "preferencesInfo": ""
     }
 }

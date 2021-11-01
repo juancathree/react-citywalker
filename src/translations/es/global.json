@@ -46,9 +46,16 @@
         "startDayInfo": "Este es el día de tu llegada a la ciudad y la hora en que comienzas a visitar lugares",
         "endDay": "Dia y hora final",
         "endDayInfo": "Este es el dia que dejas la ciudad y la hora en que dejas de visitar lugares",
-        "startItinerary": "Hora inicial del itinerario",
-        "startItineraryInfo": "Esta es la hora inicial de visitar lugares del resto de dias que no sea el de llegada",
-        "endItinerary": "Hora final del itinerario",
-        "endItineraryInfo":"Esta es la hora final de visitar lugares del resto de dias que no sea el de dejar la ciudad" 
+        "itineraryStartTime": "Hora inicial del itinerario",
+        "itineraryStartTimeInfo": "Esta es la hora inicial de visitar lugares del resto de dias que no sea el de llegada",
+        "itineraryEndTime": "Hora final del itinerario",
+        "itineraryEndTimeInfo":"Esta es la hora final de visitar lugares del resto de dias que no sea el de dejar la ciudad" ,
+        "button": "Continuar",
+        "entry": "Elige los lugares para entrar",
+        "entryInfo": "Selecciona los lugares para los que tengas o pienses comprar entrada",
+        "visit": "Elige los lugares que para no visitar",
+        "visitInfo": "Selecciona los lugares que NO quieras visitar",
+        "preferences": "Elige el tipo de lugar que NO te interesan",
+        "preferencesInfo": "Seleccion las categorias de lugares que no te interesa visitar"
     }
 }
