@@ -5,7 +5,9 @@
    justify-content: center;
    align-content: center;
    align-self: center;
-   width: 50%;
+   justify-self: center;
+   width: max-content;
+   padding: 1rem;
    background-color: $coral;
    border: none;
    outline: none;
