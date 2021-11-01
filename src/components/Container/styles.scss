@@ -2,8 +2,8 @@
 
 .container {
    display: grid;
-   justify-content: center;
    grid-auto-rows: max-content;
+   justify-content: center;
    row-gap: 1rem;
    background-color: $background;
 }
