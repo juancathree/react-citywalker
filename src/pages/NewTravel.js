@@ -1,15 +1,23 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, Redirect } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'react-toastify';
 import postTravel from 'services/postTravel';
-import CityForm from 'components/NewTravel/CityForm';
-import ScheduleForm from 'components/NewTravel/ScheduleForm';
+import getPlaces from 'services/getPlaces';
+
+const CityForm = lazy(() => import('components/NewTravel/CityForm'));
+const ScheduleForm = lazy(() => import('components/NewTravel/ScheduleForm'));
+const EntryForm = lazy(() => import('components/NewTravel/EntryForm'));
+const VisitForm = lazy(() => import('components/NewTravel/VisitForm'));
+const PreferencesForm = lazy(() =>
+   import('components/NewTravel/PreferencesForm')
+);
 
 function NewTravel() {
    const dispatch = useDispatch();
    const history = useHistory();
+   const { i18n } = useTranslation('global');
    const [t] = useTranslation('global');
    const status = useSelector((state) => state.travels.status);
    const [state, setState] = useState({
@@ -54,6 +62,11 @@ function NewTravel() {
       },
       []
    );
+
+   useEffect(() => {
+      dispatch(getPlaces(i18n.language, state.city.toLowerCase()));
+      // eslint-disable-next-line
+   }, [dispatch, i18n]);
 
    const nextStep = (input, value) => {
       if (state.step === 4) {
@@ -128,36 +141,33 @@ function NewTravel() {
          );
       case 2:
          return (
-            // <EntryForm
-            //    prevStep={prevStep}
-            //    nextStep={nextStep}
-            //    values={state}
-            //    handleChangeAdd={handleChangeAdd}
-            //    handleChangeRemove={handleChangeRemove}
-            // />
-            <h1>Entry</h1>
+            <EntryForm
+               prevStep={prevStep}
+               nextStep={nextStep}
+               values={state}
+               handleChangeAdd={handleChangeAdd}
+               handleChangeRemove={handleChangeRemove}
+            />
          );
       case 3:
          return (
-            // <VisitForm
-            //    prevStep={prevStep}
-            //    nextStep={nextStep}
-            //    values={state}
-            //    handleChangeAdd={handleChangeAdd}
-            //    handleChangeRemove={handleChangeRemove}
-            // />
-            <h1>Visit</h1>
+            <VisitForm
+               prevStep={prevStep}
+               nextStep={nextStep}
+               values={state}
+               handleChangeAdd={handleChangeAdd}
+               handleChangeRemove={handleChangeRemove}
+            />
          );
       case 4:
          return (
-            // <PreferencesForm
-            //    prevStep={prevStep}
-            //    nextStep={nextStep}
-            //    values={state}
-            //    handleChangeAdd={handleChangeAdd}
-            //    handleChangeRemove={handleChangeRemove}
-            // />
-            <h1>Preferences</h1>
+            <PreferencesForm
+               prevStep={prevStep}
+               nextStep={nextStep}
+               values={state}
+               handleChangeAdd={handleChangeAdd}
+               handleChangeRemove={handleChangeRemove}
+            />
          );
       case 5:
          return <Redirect to="/travels" />;
