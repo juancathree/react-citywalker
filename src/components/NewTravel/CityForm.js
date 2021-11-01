@@ -1,7 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Head from './Head';
-import List from './List';
+import CityList from './CityList';
 
 function CityForm({ nextStep }) {
    const history = useHistory();
@@ -19,7 +19,7 @@ function CityForm({ nextStep }) {
    return (
       <>
          <Head onClick={goBack} text={t('newTravel.city')} />
-         <List onClick={goOn} />
+         <CityList onClick={goOn} />
       </>
    );
 }

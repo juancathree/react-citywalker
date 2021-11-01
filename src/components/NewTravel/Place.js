@@ -3,16 +3,9 @@ import './place.scss';
 
 function Place({ id, name, onClick }) {
    return (
-      <div
-         id={id ? id : name}
-         key={name}
-         className="newTravel-place"
-         onClick={onClick}
-      >
+      <div id={name} key={name} className="newTravel-place" onClick={onClick}>
          <IKImage
-            path={
-               id ? id.toLowerCase() + '.webp' : name.toLowerCase() + '.webp'
-            }
+            path={id + '.webp'}
             loading="lazy"
             className="newTravel-place__img"
          />
