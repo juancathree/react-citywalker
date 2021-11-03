@@ -9,6 +9,10 @@ const City = lazy(() => import('pages/City'));
 const Travels = lazy(() => import('pages/Travels'));
 const User = lazy(() => import('pages/User'));
 const NewTravel = lazy(() => import('pages/NewTravel'));
+const Travel = lazy(() => import('pages/Travel'));
+const Expenses = lazy(() => import('pages/Expenses'));
+const Edit = lazy(() => import('pages/Edit'));
+const Invite = lazy(() => import('pages/Invite'));
 
 function AppRouter() {
    return (
@@ -21,6 +25,18 @@ function AppRouter() {
                <PrivateRoute path="/cities" component={Cities} exact />
                <PrivateRoute path="/cities/:id" component={City} exact />
                <PrivateRoute path="/travels" component={Travels} exact />
+               <PrivateRoute path="/travels/:id" component={Travel} exact />
+               <PrivateRoute path="/travels/:id/edit" component={Edit} exact />
+               <PrivateRoute
+                  path="/travels/:id/expenses"
+                  component={Expenses}
+                  exact
+               />
+               <PrivateRoute
+                  path="/travels/:id/invite"
+                  component={Invite}
+                  exact
+               />
                <PrivateRoute path="/newTravel" component={NewTravel} exact />
                <PrivateRoute path="/user" component={User} exact />
             </Switch>
