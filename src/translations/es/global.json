@@ -1,4 +1,10 @@
 {
+    "error": {
+        "errorServer": "Algo no funciono, intentalo mas tarde",
+        "errorCrendentials": "Credenciales erroneas",
+        "erroremail": "Debe ser un email valido",
+        "errorpassword": "Debe tener una longitud mayor a 0"
+    },
     "login": {
         "email": "Email",
         "password": "Contraseña",
@@ -7,14 +13,11 @@
         "required": "es requerido",
         "signup": "¿No tienes una cuenta?",
         "signupLink": "Registrarse",
-        "checkCredentials": "Comprobando credenciales",
-        "errorServer": "Algo no funciono, intentalo mas tarde",
-        "errorCrendentials": "Credenciales erroneas",
-        "erroremail": "Debe ser un email valido",
-        "errorpassword": "Debe tener una longitud mayor a 0"
+        "checkCredentials": "Comprobando credenciales"
     },
     "signup": {
         "name": "Nombre",
+        "nickname": "Nickname",
         "signup": "Registrarse",
         "googleSignup": "Registrarse con Google",
         "login": "¿Tienes una cuenta?",
@@ -26,7 +29,7 @@
         "erroremail": "Debe ser un email valido",
         "errorpassword": "Debe tener una longitud mayor a 0",
         "errorname": "Debe tener una longitud mayor a 0",
-        "duplicateKey": "Ya existe una usuario con este email"
+        "duplicateKey": "Ya existe una usuario con este email o nickname"
     },
     "navbar": {
         "cities": "Ciudades",
@@ -56,6 +59,25 @@
         "visit": "Elige los lugares que para no visitar",
         "visitInfo": "Selecciona los lugares que NO quieras visitar",
         "preferences": "Elige el tipo de lugar que NO te interesan",
-        "preferencesInfo": "Seleccion las categorias de lugares que no te interesa visitar"
+        "preferencesInfo": "Seleccion las categorias de lugares que no te interesa visitar",
+        "success": "Viaje creado"
+    },
+    "noTravel": {
+        "empty": "No tienes ningun viaje"
+    },
+    "map": {
+        "day": "Dia"
+    },
+    "options": {
+        "expenses": "Gastos",
+        "places": "Lugares",
+        "edit": "Editar",
+        "invite": "Invitar"
+    },
+    "expenses": {
+        "total": "Total:",
+        "private": "Privados",
+        "group": "Grupales",
+        "addExpense": "Agregar gasto"
     }
 }

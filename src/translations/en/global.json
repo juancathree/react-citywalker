@@ -1,4 +1,10 @@
 {
+    "error": {
+        "errorServer": "Something went wrong, try it later",
+        "errorCrendentials": "Credenciales erroneas",
+        "erroremail": "Debe ser un email valido",
+        "errorpassword": "Debe tener una longitud mayor a 0"
+    },
     "login": {
         "email": "Email",
         "password": "Password",
@@ -7,12 +13,11 @@
         "required": "is required",
         "signup": "Don't have an account?",
         "singupLink": "Sing up",
-        "checkCredentials": "Checking credentials",
-        "errorServer": "Something went wrong, try it later"
-       
+        "checkCredentials": "Checking credentials"
     },
     "signup": {
         "name": "Name",
+        "nickname": "Nickname",
         "signup": "Sign up",
         "googleSignup": "Sign up with Google",
         "login": "Do you have an account?",
@@ -24,7 +29,7 @@
         "erroremail": "Must be a valid email",
         "errorpassword": "Must be longer than 0",
         "errorname": "Must be longer than 0",
-        "duplicateKey": "There is already a user with this email"
+        "duplicateKey": "There is already a user with this email or nickname"
     },
     "navbar": {
         "cities": "Cities",
@@ -54,6 +59,7 @@
         "visit": "",
         "visitInfo": "",
         "preferences": "",
-        "preferencesInfo": ""
+        "preferencesInfo": "",
+        "success": ""
     }
 }
