@@ -3,7 +3,7 @@ import { setFulfilled, setPending, setRejected } from 'reducers/placesReducer';
 const getPlaces = (lng, id) => async (dispatch) => {
    dispatch(setPending());
    try {
-      if (window.sessionStorage.getItem(id)) {
+      if (window.sessionStorage.hasOwnProperty(id)) {
          dispatch(setFulfilled(JSON.parse(window.sessionStorage.getItem(id))));
       } else {
          const response = await fetch(

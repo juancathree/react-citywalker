@@ -1,26 +1,17 @@
 import { setFulfilled, setPending, setRejected } from 'reducers/travelsReducer';
 
-const postTravel =
-   ({ travel, lng }) =>
+const getTravels =
+   ({ lng }) =>
    async (dispatch) => {
       dispatch(setPending());
       try {
          var response = await fetch(
             `${process.env.REACT_APP_API}/${lng}/travel`,
             {
-               method: 'POST',
-               headers: { 'Content-Type': 'application/json' },
+               method: 'GET',
                credentials: 'include',
-               body: JSON.stringify({ ...travel }),
             }
          );
-         if (!response.ok) {
-            throw new Error(response.status);
-         }
-         response = await fetch(`${process.env.REACT_APP_API}/${lng}/travel`, {
-            method: 'GET',
-            credentials: 'include',
-         });
          if (!response.ok) {
             throw new Error(response.status);
          }
@@ -31,4 +22,4 @@ const postTravel =
       }
    };
 
-export default postTravel;
+export default getTravels;

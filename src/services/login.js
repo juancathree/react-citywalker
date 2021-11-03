@@ -24,6 +24,7 @@ const login =
             ';expires=' +
             d +
             ';path=/';
+         window.localStorage.setItem('email', email);
          dispatch(setFulfilled(data));
       } catch (e) {
          dispatch(setRejected(e.message));

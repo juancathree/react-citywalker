@@ -1,17 +1,17 @@
 import { setFulfilled, setPending, setRejected } from 'reducers/travelsReducer';
 
-const postTravel =
-   ({ travel, lng }) =>
+const updateExpenses =
+   ({ expense, lng }) =>
    async (dispatch) => {
       dispatch(setPending());
       try {
          var response = await fetch(
-            `${process.env.REACT_APP_API}/${lng}/travel`,
+            `${process.env.REACT_APP_API}/${lng}/travel/expenses`,
             {
                method: 'POST',
                headers: { 'Content-Type': 'application/json' },
                credentials: 'include',
-               body: JSON.stringify({ ...travel }),
+               body: JSON.stringify({ ...expense }),
             }
          );
          if (!response.ok) {
@@ -31,4 +31,4 @@ const postTravel =
       }
    };
 
-export default postTravel;
+export default updateExpenses;

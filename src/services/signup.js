@@ -1,7 +1,7 @@
 import { setFulfilled, setPending, setRejected } from 'reducers/authReducer';
 
 const signup =
-   ({ name, email, password }) =>
+   ({ nickname, email, password }) =>
    async (dispatch) => {
       dispatch(setPending());
       try {
@@ -10,7 +10,7 @@ const signup =
             headers: {
                'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, email, password }),
+            body: JSON.stringify({ nickname, email, password }),
          });
          if (!response.ok) {
             throw new Error(response.status);
