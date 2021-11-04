@@ -1,0 +1,43 @@
+@import 'styles/_colors.scss';
+
+.slider {
+   scroll-snap-type: x mandatory;
+   display: grid;
+   grid-template-columns: repeat(10, 100vw);
+   -webkit-overflow-scrolling: touch;
+   overflow-x: scroll;
+}
+
+section {
+   width: 100vw;
+   height: 50vh;
+   scroll-snap-align: start;
+   display: grid;
+   grid-template-rows: 93% 7%;
+   justify-self: center;
+   align-self: center;
+}
+
+.map-index {
+   font-weight: bold;
+   margin: 0.2rem;
+   justify-self: center;
+}
+
+.leaflet-container {
+   position: relative;
+   justify-self: center;
+   width: 80%;
+   height: 100%;
+   border: 1px solid $border;
+   border-radius: 15px;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.leaflet-popup-content-wrapper {
+   padding: 0 !important;
+}
+
+.leaflet-popup-content {
+   margin: 0 !important;
+}
