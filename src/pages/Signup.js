@@ -18,7 +18,7 @@ function SignUp() {
          case 'pending':
             document.getElementsByClassName('button').innerHTML = <Spinner />;
             break;
-         case 'succeded':
+         case 'succeeded':
             toast.success(t('signup.success'), {
                autoClose: 2000,
             });

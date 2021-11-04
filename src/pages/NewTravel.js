@@ -18,6 +18,7 @@ function NewTravel() {
    const dispatch = useDispatch();
    const history = useHistory();
    const { i18n } = useTranslation('global');
+   const lng = i18n.language;
    const [t] = useTranslation('global');
    const status = useSelector((state) => state.travels.status);
    const [state, setState] = useState({
@@ -34,18 +35,14 @@ function NewTravel() {
 
    useEffect(() => {
       switch (status.loading) {
-         case 'succeded':
-            toast.success(t('travel.success'), {
+         case 'succeeded':
+            toast.success(t('newTravel.success'), {
                autoClose: 2000,
             });
             history.push('/travels');
             break;
          case 'rejected':
-            let error =
-               status.error === 500
-                  ? t('login.errorServer')
-                  : t('auth.duplicateKey');
-            toast.error(error, {
+            toast.error(t('error.serverError'), {
                autoClose: 2000,
             });
             history.push('/travels');
@@ -64,9 +61,9 @@ function NewTravel() {
    );
 
    useEffect(() => {
-      dispatch(getPlaces(i18n.language, state.city.toLowerCase()));
+      dispatch(getPlaces(lng, state.city.toLowerCase()));
       // eslint-disable-next-line
-   }, [dispatch, i18n]);
+   }, [dispatch, lng]);
 
    const nextStep = (input, value) => {
       if (state.step === 4) {
@@ -84,7 +81,7 @@ function NewTravel() {
             customEntryLocations: state.customEntryLocations,
             preferences: state.preferences,
          };
-         dispatch(postTravel(travel));
+         dispatch(postTravel({ travel, lng }));
       }
       setState({
          ...state,

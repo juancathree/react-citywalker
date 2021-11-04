@@ -12,12 +12,7 @@ function City() {
    const { i18n } = useTranslation('global');
 
    useEffect(() => {
-      const re = new RegExp(`(?<=citywalker-${id}=)[^;]*`);
-      try {
-         return document.cookie.match(re)[0];
-      } catch {
-         dispatch(getPlaces(i18n.language, id));
-      }
+      dispatch(getPlaces(i18n.language, id));
    }, [dispatch, i18n, id]);
 
    return (
