@@ -14,14 +14,14 @@ function SignupForm() {
    const [t] = useTranslation('global');
 
    const SignupSchema = Yup.object().shape({
-      name: Yup.string().required(),
+      nickname: Yup.string().required(),
       email: Yup.string().email().required(),
       password: Yup.string().required(),
    });
 
    return (
       <Formik
-         initialValues={{ name: '', email: '', password: '' }}
+         initialValues={{ nickname: '', email: '', password: '' }}
          validationSchema={SignupSchema}
          validateOnChange={true}
          onSubmit={(values) => {
@@ -35,9 +35,9 @@ function SignupForm() {
                   <span className="second">Walker</span>
                </h2>
                <FormInput
-                  name="name"
+                  name="nickname"
                   type="text"
-                  placeholder={t('signup.name')}
+                  placeholder={t('signup.nickname')}
                   icon={faUser}
                />
                <FormInput
@@ -57,8 +57,8 @@ function SignupForm() {
                   disabled={
                      values.email &&
                      values.password &&
-                     values.name &&
-                     !errors.name &&
+                     values.nickname &&
+                     !errors.nickname &&
                      !errors.password &&
                      !errors.email
                         ? false
