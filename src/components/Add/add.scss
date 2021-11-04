@@ -1,0 +1,14 @@
+@import 'styles/_colors.scss';
+
+.add-btn {
+   position: absolute;
+   bottom: 8rem;
+   right: 1.5rem;
+   border-radius: 10px;
+   border: none;
+   outline: none;
+   background-color: $coral;
+   color: $white;
+   font-weight: bold;
+   padding: 0.5rem;
+}
