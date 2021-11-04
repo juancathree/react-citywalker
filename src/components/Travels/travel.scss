@@ -1,0 +1,65 @@
+@import 'styles/_colors.scss';
+
+.travel {
+   position: relative;
+   height: 15vh;
+   width: 100%;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+   border-radius: 10px;
+
+   &__img {
+      object-fit: cover;
+      height: 80%;
+      width: 100%;
+      border-radius: 10px;
+   }
+
+   &__title {
+      font-family: 'Kaushan Script', cursive !important;
+      position: absolute;
+      margin: 0;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      color: $white;
+      font-size: 3rem;
+      text-shadow: 2px 2px 2px $black;
+   }
+
+   &__date {
+      display: grid;
+      grid-template-columns: 10% 90%;
+      color: $black;
+      text-align: left;
+      width: 70%;
+      margin-bottom: 0.1rem;
+      position: absolute;
+      bottom: 0rem;
+      left: 0.1rem;
+   }
+
+   &__users {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      color: $black;
+      width: 10%;
+      position: absolute;
+      margin-bottom: 0.1rem;
+      bottom: 0;
+      right: 1rem;
+   }
+
+   &-icon {
+      font-size: 1rem;
+      align-self: center;
+      justify-self: center;
+   }
+
+   &-text {
+      margin: 0;
+      align-self: center;
+      justify-self: center;
+      font-size: 1rem;
+      font-weight: bold;
+   }
+}
