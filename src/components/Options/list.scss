@@ -1,0 +1,21 @@
+@import 'styles/_colors.scss';
+
+.hide-add {
+   display: none;
+}
+
+.btn-add-expense {
+   position: fixed;
+   bottom: 4rem;
+   right: 1.5rem;
+   border-radius: 10px;
+   background-color: $coral;
+   padding: 0.5rem;
+   border: none;
+
+   p {
+      margin: 0;
+      color: $white;
+      font-weight: bold;
+   }
+}

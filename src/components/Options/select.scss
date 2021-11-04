@@ -1,0 +1,20 @@
+@import 'styles/_colors.scss';
+
+.select {
+   justify-self: center;
+   display: grid;
+   grid-template-columns: minmax(min-content, max-content) minmax(
+         min-content,
+         max-content
+      );
+   column-gap: 1rem;
+
+   p {
+      margin: 1rem 0 0 0;
+   }
+
+   .active {
+      font-weight: bold;
+      color: $verde;
+   }
+}

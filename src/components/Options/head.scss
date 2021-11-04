@@ -1,0 +1,29 @@
+@import 'styles/_colors.scss';
+
+.options-head {
+   position: relative;
+   width: 100vw;
+   height: 4rem;
+   background-color: $coral;
+
+   &__back {
+      position: absolute;
+      margin: 1rem 0 0 1rem;
+      background-color: $white;
+      border-radius: 50px;
+      padding: 0.3rem;
+      border: 1px solid $border;
+   }
+
+   &__title {
+      font-family: 'Kaushan Script', cursive !important;
+      position: absolute;
+      margin: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+      font-size: 2rem;
+      text-shadow: 2px 2px 10px $black;
+   }
+}
