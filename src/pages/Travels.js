@@ -18,7 +18,8 @@ function Travels() {
 
    useEffect(() => {
       if (travels.length === 0) {
-         dispatch(getTravels({ lng }));
+         const length = 0;
+         dispatch(getTravels({ lng, length }));
       }
    }, [dispatch, lng, travels]);
 
