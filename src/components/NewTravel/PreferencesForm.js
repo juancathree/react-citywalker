@@ -50,7 +50,7 @@ function PreferencesForm({
                <Place
                   key={category}
                   name={category}
-                  id={category}
+                  id={category.replaceAll(' ', '_')}
                   onClick={handleClick}
                />
             ))}
