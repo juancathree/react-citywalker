@@ -61,9 +61,10 @@ function NewTravel() {
    );
 
    useEffect(() => {
+      if (state.city === '') return;
       dispatch(getPlaces(lng, state.city.toLowerCase()));
       // eslint-disable-next-line
-   }, [dispatch, lng]);
+   }, [dispatch, lng, state.city]);
 
    const nextStep = (input, value) => {
       if (state.step === 4) {
