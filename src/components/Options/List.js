@@ -3,9 +3,12 @@ import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import updateExpenses from 'services/updateExpenses';
+import { toast } from 'react-toastify';
 import './list.scss';
+import AddExpense from './AddExpense';
+import RemoveExpense from './RemoveExpense';
 
 function List({ travel, personal }) {
    const { id } = useParams();
@@ -15,26 +18,59 @@ function List({ travel, personal }) {
    const dispatch = useDispatch();
    const [expense, setExpense] = useState({
       user: '',
-      expense: '',
+      amount: '',
+      description: '',
+      isPersonal: true,
       travelID: id,
-      exists: '',
+      exists: false,
    });
    const [remove, setRemove] = useState(false);
    const [add, setAdd] = useState(false);
-   const user = travel['travelUsers'].find(
+   const u = travel['travelUsers'].find(
       (u) => u.email === window.localStorage.getItem('email')
    );
 
-   const handleClick = (e, index) => {
+   const handleClick = (e, nickname, isPersonal) => {
+      setExpense({
+         ...expense,
+         user: nickname,
+         amount: e.amount.toString(),
+         description: e.description,
+         isPersonal: isPersonal,
+         exists: true,
+      });
       setRemove(true);
-      setExpense({ ...expense, user: index, expense: e, exists: true });
    };
 
    const handleDelete = () => {
-      if (expense.user !== user.nickname) {
+      if (expense.user !== u.nickname) {
+         toast.error(t('expenses.otherOwner'), {
+            autoClose: 2000,
+         });
          return;
       }
+      setRemove(!remove);
       dispatch(updateExpenses({ expense, lng }));
+   };
+
+   const handleAdd = () => {
+      setAdd(!add);
+      dispatch(updateExpenses({ expense, lng }));
+   };
+
+   const handleChange = (input, value) => {
+      setExpense({
+         ...expense,
+         [input]: value,
+      });
+   };
+
+   const closeAdd = () => {
+      setAdd(!add);
+   };
+
+   const closeRemove = () => {
+      setRemove(!remove);
    };
 
    return (
@@ -42,18 +78,19 @@ function List({ travel, personal }) {
          <div className="expenses-list">
             {personal ? (
                <>
-                  {travel['Expenses'][user.nickname]
+                  {travel['Expenses'][u.nickname]
                      .filter((e) => e.isPersonal)
                      .map((e) => (
-                        <div
-                           className="expenses-list__private"
-                           onClick={() => handleClick(e)}
-                        >
+                        <div className="expenses-list__private">
                            <p className="amount">{e.amount + ' €'}</p>
                            <p className="description">{e.description}</p>
+                           <FontAwesomeIcon
+                              className="remove"
+                              icon={faTimes}
+                              onClick={() => handleClick(e, u.nickname, true)}
+                           />
                         </div>
                      ))}
-                  )
                </>
             ) : (
                <>
@@ -65,13 +102,24 @@ function List({ travel, personal }) {
                               <>
                                  <div
                                     className="expenses-list__group"
-                                    onClick={() => handleClick(e, index)}
+                                    id={index}
                                  >
                                     <p className="amount">{e.amount + ' €'}</p>
                                     <p className="description">
                                        {e.description}
                                     </p>
-                                    <p className="user">{index}</p>
+                                    {index === u.nickname && (
+                                       <FontAwesomeIcon
+                                          className="remove"
+                                          icon={faTimes}
+                                          onClick={() =>
+                                             handleClick(e, u.nickname, false)
+                                          }
+                                       />
+                                    )}
+                                    {index !== u.nickname && (
+                                       <p className="user">{index}</p>
+                                    )}
                                  </div>
                               </>
                            ))}
@@ -86,6 +134,17 @@ function List({ travel, personal }) {
          >
             <p>{t('expenses.addExpense')}</p>
          </button>
+         {add ? (
+            <AddExpense
+               close={closeAdd}
+               handleChange={handleChange}
+               handleAdd={handleAdd}
+               values={expense}
+            />
+         ) : null}
+         {remove ? (
+            <RemoveExpense close={closeRemove} remove={handleDelete} />
+         ) : null}
       </>
    );
 }
