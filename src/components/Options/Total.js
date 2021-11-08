@@ -25,9 +25,10 @@ function Total({ travel, personal }) {
                </p>
             </div>
          ) : (
-            <div className="item">
+            <div className="item-group">
                {Object.keys(travel['Expenses']).map((nick) => {
                   var total = 0;
+                  // eslint-disable-next-line
                   Object.keys(travel['Expenses']).map((nick2) => {
                      var expenses = travel['Expenses'][nick2].filter(
                         (e) => !e.isPersonal
