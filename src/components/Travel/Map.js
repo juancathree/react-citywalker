@@ -1,6 +1,12 @@
 import Place from 'components/City/Place';
 import { useSelector } from 'react-redux';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import {
+   MapContainer,
+   TileLayer,
+   Marker,
+   Popup,
+   Polyline,
+} from 'react-leaflet';
 import { useTranslation } from 'react-i18next';
 import './map.scss';
 
@@ -14,7 +20,15 @@ function Map({ journey }) {
       <div className="slider">
          {places.length > 0 &&
             journey.map((j, i) => {
+               // eslint-disable-next-line
+               if (j.length === 0) return;
                var center = places.find((p) => p['name'][`${lng}`] === j[0]);
+               var waypoints = places
+                  .filter((p) => j.includes(p['name'][`${lng}`]))
+                  .map((p) => [
+                     p.location.coordinates[1],
+                     p.location.coordinates[0],
+                  ]);
                return (
                   <section>
                      <MapContainer
@@ -48,6 +62,7 @@ function Map({ journey }) {
                                  </Popup>
                               </Marker>
                            ))}
+                        <Polyline positions={waypoints} />
                      </MapContainer>
                      <p className="map-index">{t('map.day') + ' ' + (i + 1)}</p>
                   </section>
