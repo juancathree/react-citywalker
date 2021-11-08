@@ -21,4 +21,28 @@
          font-weight: bold;
       }
    }
+
+   .item-group {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+
+      .item {
+         display: grid;
+         justify-self: center;
+         grid-template-columns: minmax(min-content, max-content) minmax(
+               min-content,
+               max-content
+            );
+         column-gap: 0.2rem;
+
+         p {
+            margin: 1rem 0 0 0;
+         }
+
+         .expenses__user {
+            font-weight: bold;
+         }
+      }
+   }
 }
