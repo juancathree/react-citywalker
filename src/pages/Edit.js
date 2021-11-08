@@ -4,8 +4,8 @@ import { useHistory, Redirect } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import postTravel from 'services/postTravel';
 import getPlaces from 'services/getPlaces';
+import putTravel from 'services/putTravel';
 
 const ScheduleForm = lazy(() => import('components/NewTravel/ScheduleForm'));
 const EntryForm = lazy(() => import('components/NewTravel/EntryForm'));
@@ -59,8 +59,11 @@ function Edit() {
    const lng = i18n.language;
    const [t] = useTranslation('global');
 
+   console.log(travel);
+
    const [state, setState] = useState({
       step: 0,
+      travelID: travel['_id'],
       city: travel['city'],
       startDay: toInputDate(new Date(travel['startDay'])),
       endDay: toInputDate(new Date(travel['endDay'])),
@@ -69,6 +72,8 @@ function Edit() {
       customEntryLocations: travel['customEntryLocations'],
       customVisitLocations: travel['customVisitLocations'],
       preferences: travel['preferences'],
+      travelUsers: travel['travelUsers'],
+      Expenses: travel['Expenses'],
    });
 
    useEffect(() => {
@@ -105,8 +110,9 @@ function Edit() {
    }, [dispatch, lng, state.city]);
 
    const nextStep = (input, value) => {
-      if (state.step === 4) {
+      if (state.step === 3) {
          var travel = {
+            _id: state.travelID,
             city: state.city,
             startDay: new Date(state.startDay).toISOString(),
             endDay: new Date(state.endDay).toISOString(),
@@ -119,8 +125,10 @@ function Edit() {
             customVisitLocations: state.customVisitLocations,
             customEntryLocations: state.customEntryLocations,
             preferences: state.preferences,
+            travelUsers: state.travelUsers,
+            Expenses: state.Expenses,
          };
-         dispatch(postTravel({ travel, lng }));
+         dispatch(putTravel({ travel, lng }));
       }
       setState({
          ...state,
