@@ -1,83 +1,104 @@
 {
-    "error": {
-        "errorServer": "Algo no funciono, intentalo mas tarde",
-        "errorCrendentials": "Credenciales erroneas",
-        "erroremail": "Debe ser un email valido",
-        "errorpassword": "Debe tener una longitud mayor a 0"
-    },
-    "login": {
-        "email": "Email",
-        "password": "Contraseña",
-        "login": "Entrar",
-        "googleLogin": "Entrar con Google",
-        "required": "es requerido",
-        "signup": "¿No tienes una cuenta?",
-        "signupLink": "Registrarse",
-        "checkCredentials": "Comprobando credenciales"
-    },
-    "signup": {
-        "name": "Nombre",
-        "nickname": "Nickname",
-        "signup": "Registrarse",
-        "googleSignup": "Registrarse con Google",
-        "login": "¿Tienes una cuenta?",
-        "loginLink": "Entrar",
-        "success": "Bienvenid@ a CityWalker"
-    },
-    "auth": {
-        "errorCrendentials": "Credenciales erroneas",
-        "erroremail": "Debe ser un email valido",
-        "errorpassword": "Debe tener una longitud mayor a 0",
-        "errorname": "Debe tener una longitud mayor a 0",
-        "duplicateKey": "Ya existe una usuario con este email o nickname"
-    },
-    "navbar": {
-        "cities": "Ciudades",
-        "travels": "Viajes",
-        "user": "Usuario"
-    },
-    "search": {
-        "placeholder": "Busca una ciudad..."
-    },
-    "add": {
-        "travel": "Crear viaje"
-    },
-    "newTravel": {
-        "city": "Elige una ciudad",
-        "schedule": "Elige el horario del viaje",
-        "startDay": "Dia y hora inicial",
-        "startDayInfo": "Este es el día de tu llegada a la ciudad y la hora en que comienzas a visitar lugares",
-        "endDay": "Dia y hora final",
-        "endDayInfo": "Este es el dia que dejas la ciudad y la hora en que dejas de visitar lugares",
-        "itineraryStartTime": "Hora inicial del itinerario",
-        "itineraryStartTimeInfo": "Esta es la hora inicial de visitar lugares del resto de dias que no sea el de llegada",
-        "itineraryEndTime": "Hora final del itinerario",
-        "itineraryEndTimeInfo":"Esta es la hora final de visitar lugares del resto de dias que no sea el de dejar la ciudad" ,
-        "button": "Continuar",
-        "entry": "Elige los lugares para entrar",
-        "entryInfo": "Selecciona los lugares para los que tengas o pienses comprar entrada",
-        "visit": "Elige los lugares que para no visitar",
-        "visitInfo": "Selecciona los lugares que NO quieras visitar",
-        "preferences": "Elige el tipo de lugar que NO te interesan",
-        "preferencesInfo": "Seleccion las categorias de lugares que no te interesa visitar",
-        "success": "Viaje creado"
-    },
-    "noTravel": {
-        "empty": "No tienes ningun viaje"
-    },
-    "map": {
-        "day": "Dia"
-    },
-    "options": {
-        "expenses": "Gastos",
-        "places": "Lugares",
-        "edit": "Editar",
-        "invite": "Invitar"
-    },
-    "expenses": {
-        "total": "Total:",
-        "private": "Privados",
-        "group": "Grupales",
-        "addExpense": "Agregar gasto"
-    }
+   "error": {
+      "errorServer": "Algo no funciono, inténtalo más tarde",
+      "errorCrendentials": "Credenciales erróneas",
+      "erroremail": "Debe ser un email válido",
+      "errorpassword": "Debe tener una longitud mayor a 0"
+   },
+   "login": {
+      "email": "Email",
+      "password": "Contraseña",
+      "login": "Entrar",
+      "googleLogin": "Entrar con Google",
+      "required": "es requerido",
+      "signup": "¿No tienes una cuenta?",
+      "signupLink": "Registrarse",
+      "checkCredentials": "Comprobando credenciales"
+   },
+   "signup": {
+      "name": "Nombre",
+      "nickname": "Nickname",
+      "signup": "Registrarse",
+      "googleSignup": "Registrarse con Google",
+      "login": "¿Tienes una cuenta?",
+      "loginLink": "Entrar",
+      "success": "Bienvenid@ a CityWalker"
+   },
+   "auth": {
+      "errorCrendentials": "Credenciales erróneas",
+      "erroremail": "Debe ser un email válido",
+      "errorpassword": "Debe tener una longitud mayor a 0",
+      "errorname": "Debe tener una longitud mayor a 0",
+      "duplicateKey": "Ya existe un usuario con este email o nickname"
+   },
+   "navbar": {
+      "cities": "Ciudades",
+      "travels": "Viajes",
+      "user": "Usuario"
+   },
+   "search": {
+      "placeholder": "Busca una ciudad..."
+   },
+   "add": {
+      "travel": "Crear viaje"
+   },
+   "newTravel": {
+      "city": "Elige una ciudad",
+      "schedule": "Elige el horario del viaje",
+      "startDay": "Día y hora inicial",
+      "startDayInfo": "Este es el día de tu llegada a la ciudad y la hora en que comienzas a visitar lugares",
+      "endDay": "Día y hora final",
+      "endDayInfo": "Este es el día que dejas la ciudad y la hora en que dejas de visitar lugares",
+      "itineraryStartTime": "Hora inicial del itinerario",
+      "itineraryStartTimeInfo": "Esta es la hora inicial de visitar lugares del resto de días que no sea el de llegada",
+      "itineraryEndTime": "Hora final del itinerario",
+      "itineraryEndTimeInfo": "Esta es la hora final de visitar lugares del resto de días que no sea el de dejar la ciudad",
+      "button": "Continuar",
+      "entry": "Elige los lugares para entrar",
+      "entryInfo": "Selecciona los lugares para los que tengas o pienses comprar entrada",
+      "visit": "Elige los lugares que para no visitar",
+      "visitInfo": "Selecciona los lugares que NO quieras visitar",
+      "preferences": "Elige las categorías",
+      "preferencesInfo": "Selecciona las categorías de lugares que no te interesa visitar",
+      "success": "Viaje creado"
+   },
+   "noTravel": {
+      "empty": "No tienes ningún viaje"
+   },
+   "map": {
+      "day": "Día"
+   },
+   "options": {
+      "expenses": "Gastos",
+      "places": "Lugares",
+      "edit": "Editar",
+      "invite": "Invitar"
+   },
+   "expenses": {
+      "total": "Total:",
+      "private": "Privados",
+      "group": "Compartidos",
+      "addExpense": "Agregar gasto",
+      "addprivate": "Privado",
+      "addgroup": "Compartido",
+      "add": "Agregar",
+      "quantity": "Cantidad",
+      "description": "Descripción",
+      "removeExpense": "¿Eliminar gasto?",
+      "cancel": "Cancelar",
+      "remove": "Eliminar",
+      "otherOwner": "No se puede eliminar el gasto de otra persona"
+   },
+   "invite": {
+      "head": "Introduce el email del usuario a invitar al viaje",
+      "email": "Email",
+      "duplicate": "No se puede agregar a un usuario que ya existe en el viaje",
+      "button": "Invitar"
+   },
+   "travel": {
+      "removeTravel": "¿Eliminar viaje?"
+   },
+   "user": {
+      "logout": "Cerrar sesión"
+   }
 }

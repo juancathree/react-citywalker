@@ -1,65 +1,104 @@
 {
-    "error": {
-        "errorServer": "Something went wrong, try it later",
-        "errorCrendentials": "Credenciales erroneas",
-        "erroremail": "Debe ser un email valido",
-        "errorpassword": "Debe tener una longitud mayor a 0"
-    },
-    "login": {
-        "email": "Email",
-        "password": "Password",
-        "login": "Login",
-        "googleLogin": "Login with Google",
-        "required": "is required",
-        "signup": "Don't have an account?",
-        "singupLink": "Sing up",
-        "checkCredentials": "Checking credentials"
-    },
-    "signup": {
-        "name": "Name",
-        "nickname": "Nickname",
-        "signup": "Sign up",
-        "googleSignup": "Sign up with Google",
-        "login": "Do you have an account?",
-        "loginLink": "Login",
-        "success": "Welcome to CityWalker"
-    },
-    "auth": {
-        "errorCrendentials": "Bad Credentials",
-        "erroremail": "Must be a valid email",
-        "errorpassword": "Must be longer than 0",
-        "errorname": "Must be longer than 0",
-        "duplicateKey": "There is already a user with this email or nickname"
-    },
-    "navbar": {
-        "cities": "Cities",
-        "travels": "Travels",
-        "user": "User"
-    },
-    "search": {
-        "placeholder": "Search a city..."
-    },
-    "add": {
-        "travel": "Create travel"
-    },
-    "newTravel": {
-        "city": "Choose a city",
-        "schedule": "Choose the travel's schedule",
-        "startDay": "Day and hour initial",
-        "startDayInfo": "This is the day you arrive to the city and the hour you start visiting places",
-        "endDay": "Day and hour final",
-        "endDayInfo": "This is the day you leave the city and the hour you finish visiting places",
-        "itineraryStartTime": "Start hour of journey",
-        "itineraryStartTimeInfo": "This is the hour to start visiting places the rest of the days that is not the initial",
-        "itineraryEndTime": "End hour of journey",
-        "itineraryEndTimeInfo":"This is the hour to finish visiting places the rest of the days that is not the final",
-        "button": "Continue",
-        "entry": "Choose places to enter",
-        "entryInfo": "Choose the places for which you have or plan to buy a ticket",
-        "visit": "",
-        "visitInfo": "",
-        "preferences": "",
-        "preferencesInfo": "",
-        "success": ""
-    }
+   "error": {
+      "errorServer": "Something did not work, try again later",
+      "errorCrendentials": "Bad credentials",
+      "erroremail": "It must be a valid email",
+      "errorpassword": "Must have a length greater than 0"
+   },
+   "login": {
+      "email": "Email",
+      "password": "Password",
+      "login": "Login",
+      "googleLogin": "Login with Google",
+      "required": "is required",
+      "signup": "Don't have an account?",
+      "signupLink": "Sign up",
+      "checkCredentials": "Checking credentials"
+   },
+   "signup": {
+      "name": "Name",
+      "nickname": "Nickname",
+      "signup": "Sign up",
+      "googleSignup": "Register with Google",
+      "login": "Do you have an account?",
+      "loginLink": "Login",
+      "success": "Welcome to CityWalker"
+   },
+   "auth": {
+      "errorCrendentials": "Bad credentials",
+      "erroremail": "It must be a valid email",
+      "errorpassword": "Must have a length greater than 0",
+      "errorname": "Must have a length greater than 0",
+      "duplicateKey": "There is already a user with this email or nickname"
+   },
+   "navbar": {
+      "cities": "Cities",
+      "travels": "Travels",
+      "user": "User"
+   },
+   "search": {
+      "placeholder": "Search for a city ..."
+   },
+   "add": {
+      "travel": "Create trip"
+   },
+   "newTravel": {
+      "city": "Choose a city",
+      "schedule": "Choose the schedule of the trip",
+      "startDay": "Start day and time",
+      "startDayInfo": "This is the day you arrive in the city and the time you start visiting places",
+      "endDay": "End day and time",
+      "endDayInfo": "This is the day you leave the city and the time you stop visiting places",
+      "itineraryStartTime": "Itinerary start time",
+      "itineraryStartTimeInfo": "This is the starting time to visit places on the rest of the days other than the arrival time",
+      "itineraryEndTime": "Itinerary end time",
+      "itineraryEndTimeInfo": "This is the final time to visit places the rest of the days other than leaving the city",
+      "button": "Continue",
+      "entry": "Choose the places to enter",
+      "entryInfo": "Select the places for which you have or plan to buy an entry",
+      "visit": "Choose the places not to visit",
+      "visitInfo": "Select the places you do NOT want to visit",
+      "preferences": "Choose the categories",
+      "preferencesInfo": "Select the categories of places that you are not interested in visiting",
+      "success": "Trip created"
+   },
+   "noTravel": {
+      "empty": "You don't have any trips"
+   },
+   "map": {
+      "day": "Day"
+   },
+   "options": {
+      "expenses": "Expenses",
+      "places": "Places",
+      "edit": "Edit",
+      "invite": "Invite"
+   },
+   "expenses": {
+      "total": "Total:",
+      "private": "Private",
+      "group": "Shared",
+      "addExpense": "Add expense",
+      "addprivate": "Private",
+      "addgroup": "Shared",
+      "add": "Add",
+      "quantity": "Quantity",
+      "description": "Description",
+      "removeExpense": "Remove expense?",
+      "cancel": "Cancel",
+      "remove": "Remove",
+      "otherOwner": "Can't eliminate someone else's expense"
+   },
+   "invite": {
+      "head": "Enter the email of the user to invite the trip",
+      "email": "Email",
+      "duplicate": "Cannot add a user that already exists in the trip",
+      "button": "Invite"
+   },
+   "travel": {
+      "removeTravel": "Remove trip?"
+   },
+   "user": {
+      "logout": "Close session"
+   }
 }
