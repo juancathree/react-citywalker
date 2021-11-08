@@ -1,0 +1,60 @@
+@import 'styles/_colors.scss';
+
+.form-invite {
+   display: grid;
+   justify-content: center;
+
+   &__head {
+      text-align: center;
+      justify-self: center;
+      width: 70%;
+   }
+
+   &__email {
+      display: grid;
+      justify-self: center;
+      grid-template-columns: 15% 85%;
+      grid-auto-columns: 100%;
+      align-self: center;
+      width: 100%;
+      padding: 0 0.4rem;
+      position: relative;
+      height: 2.5rem;
+      background-color: $white;
+      margin: 0.5rem 0 0.5rem;
+      border-radius: 10px;
+      border: 1px solid $border;
+
+      &:focus-within {
+         border: 2px solid $verde !important;
+
+         .form-invite__icon {
+            color: $verde !important;
+         }
+      }
+   }
+
+   &__icon {
+      width: 1.1rem;
+      background-color: transparent;
+      align-self: center;
+      justify-self: center;
+      text-align: center;
+      line-height: 55px;
+      color: $border;
+   }
+
+   &__field {
+      background: none;
+      outline: none;
+      border: none;
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: $black;
+
+      &::placeholder {
+         font-weight: 400;
+         color: $border;
+      }
+   }
+}
