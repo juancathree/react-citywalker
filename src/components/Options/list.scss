@@ -19,3 +19,69 @@
       font-weight: bold;
    }
 }
+
+.expenses-list {
+   display: grid;
+   grid-auto-rows: minmax(min-content, max-content);
+   grid-template-columns: 80%;
+   row-gap: 1rem;
+   justify-content: center;
+   align-content: center;
+   margin: 2rem 0 2rem 0;
+
+   &__private {
+      display: grid;
+      grid-template-columns: 20% 70% 10%;
+      border: 1px solid $border;
+      border-radius: 10px;
+      padding: 0.5rem;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+      p {
+         margin: 0;
+         justify-self: center;
+         font-size: 0.9rem;
+      }
+
+      .amount {
+         font-weight: bold;
+      }
+
+      .remove {
+         color: $error;
+         justify-self: center;
+      }
+   }
+
+   &__group {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+      border: 1px solid $border;
+      border-radius: 10px;
+      padding: 0.5rem;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+      p {
+         margin: 0;
+         text-align: center;
+         justify-self: center;
+         font-size: 0.9rem;
+      }
+
+      .amount {
+         font-weight: bold;
+         align-self: center;
+      }
+
+      .remove {
+         color: $error;
+         justify-self: right;
+         align-self: center;
+         margin-right: 0.5rem;
+      }
+
+      .user {
+         color: $info;
+      }
+   }
+}
