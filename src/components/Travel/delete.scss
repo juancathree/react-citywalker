@@ -1,0 +1,16 @@
+@import 'styles/_colors.scss';
+
+.delete {
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   width: 2rem !important;
+   height: 2rem !important;
+   color: $black;
+   -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+   filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+   background-color: $white;
+   border: 1px solid $border;
+   padding: 0.4rem;
+   border-radius: 10px;
+}
