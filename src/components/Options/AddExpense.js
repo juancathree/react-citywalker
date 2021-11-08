@@ -1,7 +1,17 @@
-import { useState } from 'react';
-import './addexpense.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+   faTimes,
+   faEuroSign,
+   faInfoCircle,
+   faShareAltSquare,
+} from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
-function AddExpense({ values, onChange }) {
+import './addexpense.scss';
+import Button from 'components/Button/Button';
+
+function AddExpense({ handleChange, close, handleAdd, values }) {
+   const [t] = useTranslation('global');
    return (
       <div className="add">
          <div className="add__form">
@@ -14,45 +24,54 @@ function AddExpense({ values, onChange }) {
             <div key="cantidad" className="add__form-input">
                <FontAwesomeIcon className="add__form-icon" icon={faEuroSign} />
                <input
-                  id="cantidad"
+                  id="amount"
                   className="add__form-field"
                   type="number"
+                  onChange={(e) => handleChange('amount', e.target.value)}
                   placeholder={t('expenses.quantity')}
-                  onChange={onChange}
-                  value={values.amount}
                />
             </div>
             <div key="description" className="add__form-input">
-               <FontAwesomeIcon className="input__icon" icon={faInfoCircle} />
+               <FontAwesomeIcon
+                  className="add__form-icon"
+                  icon={faInfoCircle}
+               />
                <input
                   id="description"
-                  className="input__field"
+                  className="add__form-field"
                   type="text"
-                  placeholder="Descripcion"
-                  onChange={(e) => {
-                     setState({ ...state, description: e.target.value });
-                  }}
-                  value={state.description}
+                  placeholder={t('expenses.description')}
+                  onChange={(e) => handleChange('description', e.target.value)}
                />
             </div>
-            <div className="input">
+            <div key="isPersonal" className="add__form-input">
                <FontAwesomeIcon
-                  className="input__icon"
+                  className="add__form-icon"
                   icon={faShareAltSquare}
                />
                <select
-                  className="input__field"
-                  onChange={(e) => {
-                     setState({ ...state, isPersonal: e.target.value });
-                  }}
+                  id="isPersonal"
+                  className="add__form-field"
+                  onChange={(e) =>
+                     handleChange('isPersonal', e.target.value === 'true')
+                  }
                >
-                  <option value="true">Personal</option>
-                  <option value="false">Grupal</option>
+                  <option value="true">{t('expenses.addprivate')}</option>
+                  <option value="false">{t('expenses.addgroup')}</option>
                </select>
             </div>
-            <button className="btn" onClick={handleSubmit}>
-               <p>Agregar</p>
-            </button>
+            <Button
+               onClick={handleAdd}
+               disabled={
+                  values.amount &&
+                  values.description &&
+                  values.isPersonal !== ''
+                     ? false
+                     : true
+               }
+            >
+               {t('expenses.add')}
+            </Button>
          </div>
       </div>
    );
