@@ -23,12 +23,10 @@ function Map({ journey }) {
                // eslint-disable-next-line
                if (j.length === 0) return;
                var center = places.find((p) => p['name'][`${lng}`] === j[0]);
-               var waypoints = places
-                  .filter((p) => j.includes(p['name'][`${lng}`]))
-                  .map((p) => [
-                     p.location.coordinates[1],
-                     p.location.coordinates[0],
-                  ]);
+               var waypoints = j.map((r) => {
+                  var p = places.find((place) => place['name'][`${lng}`] === r);
+                  return [p.location.coordinates[1], p.location.coordinates[0]];
+               });
                return (
                   <section>
                      <MapContainer
